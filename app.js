@@ -1,5 +1,5 @@
 const { Client, Util } = require('discord.js');
-const prefix  = "hb!";
+const prefix  = process.env.PREFIX;
 const google_api_key = process.env.GOOGLE_APIKEY;
 const Discord = require('discord.js');
 const ytdl = require('ytdl-core');
