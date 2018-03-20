@@ -1,0 +1,19 @@
+{
+  "name": "Test",
+  "description": "Test",
+  "version": "0.0.0",
+  "main": "app.js",
+  "scripts": {
+    "start": "node app.js"
+  },
+  "dependencies": {
+    "build-tools": "^7.2.4",
+    "discord.js": "^11.3.0",
+    "ffmpeg-binaries": "^3.2.2-3",
+    "opusscript": "0.0.6",
+    "profanities": "^2.6.0",
+    "simple-youtube-api": "^5.0.1",
+    "urban": "^0.3.1",
+    "ytdl-core": "^0.20.2"
+  }
+}
