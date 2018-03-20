@@ -48,6 +48,7 @@ client.on('message', async message => {
 					thumbnail : `https://img.youtube.com/vi/${video.id}/maxresdefault.jpg`,
 					durationmin : video.duration.minutes,
 					durationsec : video.duration.seconds,
+					durationhr : video.duration.hours,
 					channel : video.channel.title,
 					publishdate : video.publishedAt
 				};
@@ -108,7 +109,7 @@ client.on('message', async message => {
 			.setColor('#42f4aa')
 			.addField("Song Name", serverQueue.songs[0].title, true)
 			.addField("Channel", serverQueue.songs[0].channel, true)
-			.addField("Duration", '**'+serverQueue.songs[0].durationmin+'** minutes **'+serverQueue.songs[0].durationsec+'** seconds', true)
+			.addField("Duration", serverQueue.songs[0].durationhr+' hours '+serverQueue.songs[0].durationmin+' minutes '+serverQueue.songs[0].durationsec+' seconds', true)
 			.addField("Published At", serverQueue.songs[0].publishdate, true)
 			.addField("Youtube Link", serverQueue.songs[0].url)
 			.setFooter("Like what you're hearing? Support the creators by checking out their channels using the provided youtube links!")
