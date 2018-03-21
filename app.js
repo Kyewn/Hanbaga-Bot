@@ -149,6 +149,12 @@ client.on('message', async message => {
 		await message.author.send({embed:helpembed});
 		message.channel.send(`:mailbox_with_mail: ${message.author}`);
 		return undefined;
+	}else if(message.content.startsWith(`${prefix}shuffle`)){
+		if (!message.member.voiceChannel) return message.channel.send(":negative_squared_cross_mark: **You are not in a voice channel to use that command!**");
+		if(!serverQueue) return message.channel.send(':negative_squared_cross_mark: No songs are playing at the moment.');
+		await serverQueue.songs.sort(function(){ return 0.5 - Math.random()})
+		message.channel.send(":white_check_mark: The song queue has been shuffled!");
+		return undefined;
 	}
 	return undefined;
 });
