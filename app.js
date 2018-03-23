@@ -137,7 +137,7 @@ client.on('message', async message => {
 	}else if(message.content.startsWith(`${prefix}help`)){
 		const helpembed = new Discord.RichEmbed()
 			.setAuthor('Commands', icon = client.user.avatarURL)
-			.setDescription('**play** - Plays a specified song\n**stop** - Stops all queueing songs from playing\n**skip** - Skips a song that\'s currently playing\n**np** - Shows the currently playing song\'s information\n**q** or **queue** - Displays a list of queueing songs\n**vol** or **volume** - Set your desired volume, preferably 1 to 5\n**leave** - Leaves a voice channel')
+			.setDescription('**play** - Plays a specified song\n**stop** - Stops all queueing songs from playing\n**skip** - Skips a song that\'s currently playing\n**np** - Shows the currently playing song\'s information\n**q** or **queue** - Displays a list of queueing songs\n**vol** or **volume** - Set your desired volume, preferably 1 to 5\n**leave** - Leaves a voice channel\n**ping** - Typical ping command')
 			.setColor('#f7a145')
 			.setFooter('More commands to come in the future, but for now, hope you have fun listening to music using these commands! You can always use \'hb!help\' to refer to my commands anytime you want. Muzic On guys! ')
 		const dialog = new Discord.RichEmbed()
